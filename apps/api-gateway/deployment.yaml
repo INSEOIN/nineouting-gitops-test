@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: inseoin/nineouting-api-gateway:cache-v1
+          image: inseoin/nineouting-api-gateway:cache-v2
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
