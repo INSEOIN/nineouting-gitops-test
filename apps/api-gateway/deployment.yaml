@@ -12,10 +12,12 @@ spec:
       labels:
         app: api-gateway
     spec:
+      imagePullSecrets:
+        - name: ecr-pull
       containers:
         - name: api-gateway
-          image: inseoin/nineouting-api-gateway:cache-v2
-          imagePullPolicy: IfNotPresent
+          image: 377426330610.dkr.ecr.ap-northeast-2.amazonaws.com/nineouting-validation/api-gateway@sha256:dd799fc477ccb2647c5952d476685a638961808b76a301187654eb22f8ee3de5
+          imagePullPolicy: Always
           ports:
             - name: http
               containerPort: 8080
