@@ -1,0 +1,4 @@
+replicaCount: 1
+
+image:
+  digest: "sha256:1503284da5b25503368c85be6c90bcbb6bdd561603ceb1defbbea02e2614469f"

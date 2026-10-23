@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nineouting-api-gateway-helm-lab
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/INSEOIN/nineouting-gitops-test.git
+    targetRevision: main
+    path: charts/api-gateway-oidc-lab
+    helm:
+      releaseName: oidc-lab
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nineouting-helm-lab
+
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
