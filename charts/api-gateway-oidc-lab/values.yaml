@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: 377426330610.dkr.ecr.ap-northeast-2.amazonaws.com/nineouting-validation/api-gateway
+  digest: "sha256:1503284da5b25503368c85be6c90bcbb6bdd561603ceb1defbbea02e2614469f"
+  pullPolicy: Always
+
+imagePullSecrets:
+  - name: ecr-pull
+
+service:
+  port: 8080
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    memory: 512Mi
