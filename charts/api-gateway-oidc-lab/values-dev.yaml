@@ -1,4 +1,4 @@
 replicaCount: 1
 
 image:
-  digest: "sha256:c8c559fd743260ca84e6d90f8ab2ff374b538834c4f2326f6f1e540e0d94466c"
+  digest: "sha256:ae72919209a17db9cbc2eed7c63e715965112e5c954ec2993083c9db05ba4eeb"
